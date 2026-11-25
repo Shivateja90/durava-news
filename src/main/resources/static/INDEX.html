@@ -1,0 +1,544 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="te">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Durava News Channel</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #222;
+}
+
+header {
+    background: #b40000;
+    color: white;
+    padding: 22px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #ffdb00;
+}
+
+header p {
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+nav {
+    background: #171717;
+    padding: 15px 5%;
+    display: flex;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #ffdb00;
+}
+
+.breaking {
+    background: #ffdb00;
+    padding: 13px 5%;
+    font-weight: bold;
+}
+
+.breaking strong {
+    background: #b40000;
+    color: white;
+    padding: 8px;
+    margin-right: 10px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 25px 15px;
+}
+
+.section-title {
+    border-left: 5px solid #b40000;
+    padding-left: 12px;
+    margin-bottom: 18px;
+}
+
+.hero {
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    background: #222;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 35px 25px;
+    color: white;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+}
+
+.hero-text h1 {
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 18px;
+    box-shadow: 0 2px 7px #ddd;
+}
+
+.card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 18px;
+}
+
+.card h3 {
+    color: #b40000;
+    margin: 10px 0;
+}
+
+.tag {
+    color: #b40000;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.card p {
+    line-height: 1.7;
+    margin-top: 7px;
+}
+
+.news-meta {
+    color: #777;
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.category-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 7px #ddd;
+}
+
+.category-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.category-card h3 {
+    padding: 12px;
+    color: #b40000;
+}
+
+.small-news {
+    background: white;
+    padding: 17px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border-left: 3px solid #b40000;
+}
+
+.message {
+    background: white;
+    padding: 20px;
+    border-radius: 7px;
+    margin-bottom: 15px;
+}
+
+footer {
+    background: #171717;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    margin-top: 30px;
+}
+
+footer p {
+    margin-top: 8px;
+}
+
+@media(max-width:700px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    .hero {
+        height: 250px;
+    }
+
+    .hero-text h1 {
+        font-size: 21px;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div>
+        <div class="logo">DURAVA <span>NEWS</span></div>
+        <p>Your Voice | మీ గొంతు – Your News | మీ వార్తలు</p>
+    </div>
+    <div>తెలుగు | ENGLISH</div>
+</header>
+
+<nav>
+    <a href="/">Home</a>
+    <a href="#local">Local News</a>
+    <a href="#politics">Politics</a>
+    <a href="#education">Education</a>
+    <a href="#sports">Sports</a>
+    <a href="#about">About Us</a>
+</nav>
+
+<div class="breaking">
+    <strong>BREAKING NEWS</strong>
+    <span>దురవ న్యూస్ ఛానల్‌కు స్వాగతం | Welcome to Durava News Channel</span>
+</div>
+
+<main class="container">
+
+    <!-- FEATURED NEWS IMAGE -->
+    <div class="hero">
+        <img
+            src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1400"
+            alt="News media"
+        >
+        <div class="hero-text">
+            <span>WELCOME TO DURAVA NEWS</span>
+            <h1>ప్రతి వార్త మీకు చేరువలో</h1>
+            <p>Local News | Telangana | Education | Sports</p>
+        </div>
+    </div>
+
+    <h2 class="section-title">Latest News | తాజా వార్తలు</h2>
+
+    <div class="grid">
+
+        <section>
+
+            <!-- NEWS FROM MYSQL DATABASE -->
+            <div id="news-list">
+                <div class="message">Loading latest news...</div>
+            </div>
+
+            <h2 class="section-title" id="local">
+                Local News | స్థానిక వార్తలు
+            </h2>
+
+            <div class="card">
+                <img
+                    src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=1000"
+                    alt="City news"
+                >
+                <div class="card-content">
+                    <span class="tag">LOCAL NEWS | స్థానిక వార్తలు</span>
+                    <h3>వేములవాడ వార్తలు</h3>
+                    <p>
+                        వేములవాడ మరియు రాజన్న సిరిసిల్ల జిల్లాలోని
+                        తాజా వార్తలు, ప్రజా సమస్యలు మరియు ముఖ్యమైన
+                        సమాచారం ఇక్కడ అందించబడుతుంది.
+                    </p>
+                    <p>Local updates from Vemulawada and nearby areas.</p>
+                </div>
+            </div>
+
+            <h2 class="section-title" id="politics">
+                Politics | రాజకీయాలు
+            </h2>
+
+            <div class="card">
+                <img
+                    src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=1000"
+                    alt="Government building"
+                >
+                <div class="card-content">
+                    <span class="tag">POLITICS | రాజకీయాలు</span>
+                    <h3>తెలంగాణ రాజకీయ వార్తలు</h3>
+                    <p>
+                        తెలంగాణ రాష్ట్ర రాజకీయాలు, ప్రభుత్వ నిర్ణయాలు,
+                        ప్రజా ప్రతినిధుల కార్యక్రమాలు మరియు
+                        ముఖ్యమైన పరిణామాలు.
+                    </p>
+                    <p>Telangana political updates and public news.</p>
+                </div>
+            </div>
+
+            <h2 class="section-title" id="education">
+                Education | విద్య
+            </h2>
+
+            <div class="card">
+                <img
+                    src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1000"
+                    alt="Students studying"
+                >
+                <div class="card-content">
+                    <span class="tag">EDUCATION | విద్య</span>
+                    <h3>విద్య మరియు ఉద్యోగ సమాచారం</h3>
+                    <p>
+                        విద్యార్థులకు ఉపయోగపడే విద్యా సమాచారం,
+                        పరీక్షల తేదీలు, ఫలితాలు మరియు ఉద్యోగ
+                        నోటిఫికేషన్ల వివరాలు.
+                    </p>
+                    <p>Education, results and job updates.</p>
+                </div>
+            </div>
+
+            <h2 class="section-title" id="sports">
+                Sports | క్రీడలు
+            </h2>
+
+            <div class="card">
+                <img
+                    src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=1000"
+                    alt="Cricket stadium"
+                >
+                <div class="card-content">
+                    <span class="tag">SPORTS | క్రీడలు</span>
+                    <h3>క్రికెట్ మరియు క్రీడా వార్తలు</h3>
+                    <p>
+                        క్రికెట్, ఫుట్‌బాల్ మరియు ఇతర క్రీడలకు
+                        సంబంధించిన వార్తలు, మ్యాచ్ వివరాలు
+                        మరియు క్రీడాకారుల సమాచారం.
+                    </p>
+                    <p>Latest sports and cricket updates.</p>
+                </div>
+            </div>
+
+        </section>
+
+        <aside>
+            <h2 class="section-title">Top Stories</h2>
+
+            <div class="small-news">
+                <b>వేములవాడ</b>
+                <p>స్థానిక వార్తలు మరియు ప్రజా సమస్యలు</p>
+            </div>
+
+            <div class="small-news">
+                <b>తెలంగాణ</b>
+                <p>రాష్ట్రంలోని ముఖ్యమైన వార్తలు</p>
+            </div>
+
+            <div class="small-news">
+                <b>Education & Jobs</b>
+                <p>విద్య మరియు ఉద్యోగ సమాచారం</p>
+            </div>
+
+            <div class="small-news">
+                <b>Sports</b>
+                <p>క్రికెట్ మరియు క్రీడా వార్తలు</p>
+            </div>
+
+            <h2 class="section-title">Our Categories</h2>
+
+            <div class="category-grid">
+                <div class="category-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=600"
+                        alt="Local"
+                    >
+                    <h3>Local</h3>
+                </div>
+
+                <div class="category-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=600"
+                        alt="Politics"
+                    >
+                    <h3>Politics</h3>
+                </div>
+
+                <div class="category-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600"
+                        alt="Education"
+                    >
+                    <h3>Education</h3>
+                </div>
+
+                <div class="category-card">
+                    <img
+                        src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?w=600"
+                        alt="Sports"
+                    >
+                    <h3>Sports</h3>
+                </div>
+            </div>
+        </aside>
+
+    </div>
+</main>
+
+<footer id="about">
+    <h3>DURAVA NEWS CHANNEL</h3>
+    <p>మీ వార్తలు – మీ గొంతు</p>
+    <p>Local News | Telangana | India</p>
+    <p>© 2026 Durava News Channel. All Rights Reserved.</p>
+</footer>
+
+<script>
+async function loadNews() {
+
+    const newsList = document.getElementById("news-list");
+
+    const defaultImage =
+        "https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=1000";
+
+    try {
+        const response = await fetch("/api/news");
+
+        if (!response.ok) {
+            throw new Error("Unable to load news");
+        }
+
+        const newsArticles = await response.json();
+        newsList.replaceChildren();
+
+        if (newsArticles.length === 0) {
+            const message = document.createElement("div");
+            message.className = "message";
+            message.textContent =
+                "No news available | వార్తలు అందుబాటులో లేవు";
+            newsList.appendChild(message);
+            return;
+        }
+
+        newsArticles.forEach(news => {
+
+            const card = document.createElement("div");
+            card.className = "card";
+
+            const image = document.createElement("img");
+            image.src = defaultImage;
+            image.alt = "News image";
+            image.loading = "lazy";
+            image.onerror = function() {
+                this.style.display = "none";
+            };
+
+            const contentBox = document.createElement("div");
+            contentBox.className = "card-content";
+
+            const category = document.createElement("span");
+            category.className = "tag";
+            category.textContent = news.category || "NEWS";
+
+            const title = document.createElement("h3");
+            title.textContent = news.title || "Untitled News";
+
+            const content = document.createElement("p");
+            content.textContent = news.content || "";
+
+            const meta = document.createElement("div");
+            meta.className = "news-meta";
+            meta.textContent =
+                "Location: " + (news.location || "India") +
+                " | Published: " +
+                (news.publishedAt
+                    ? new Date(news.publishedAt).toLocaleString()
+                    : "Date unavailable");
+
+            contentBox.appendChild(category);
+            contentBox.appendChild(title);
+            contentBox.appendChild(content);
+            contentBox.appendChild(meta);
+
+            card.appendChild(image);
+            card.appendChild(contentBox);
+
+            newsList.appendChild(card);
+        });
+
+    } catch (error) {
+        console.error("News loading error:", error);
+
+        newsList.replaceChildren();
+
+        const message = document.createElement("div");
+        message.className = "message";
+        message.textContent =
+            "Unable to load news. Please refresh the page.";
+
+        newsList.appendChild(message);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", loadNews);
+</script>
+
+</body>
+</html>
